@@ -13,4 +13,5 @@ new Vue({
 	el: '#app',
 	render: h => h(App),
 	router
-}).$mount('#app')
+})
+// .$mount('#app')    //手动挂载
