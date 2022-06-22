@@ -2,28 +2,29 @@
 	<div>
 		<div>
 			<el-container>
-				<el-header>打菜</el-header>
+				<el-header style="height: 90px;line-height: 90px;background-color:#B3C0D1; background-color: #225794;">	
+						<h1>个人菜单</h1>
+
+				</el-header>
 				<el-container>
 
 					<el-container>
 						<el-main>
-							<el-table :data="tableData" style="width: 100%;font-size: 30px; "  >
-								<el-table-column prop="id" label="id" width="180">
+							<el-table :data="tableData" style="width: 100%;font-size: 50px;border-radius: 30px;">
+								<!-- <el-table-column prop="cell" label="编码" class="column">
+								</el-table-column> -->
+								<el-table-column label="菜品图" class="column">
+									<el-image style="width:230px; height:190px;" :src="URL" :preview-src-list="srcList">
+									</el-image>
+
+
+								</el-table-column>
+								<el-table-column prop="food_name" label="菜品名称" class="column">
 								</el-table-column>
 
-								<el-table-column label="菜品图" width="250px" >
-					
-								
-										<el-image style="width: 100px; height: 100px" :src="URL"></el-image>
-								
-									
+								<el-table-column prop="unit_price" label="单价" class="column">
 								</el-table-column>
-								
-								<el-table-column prop="name" label="编码" width="180">
-								</el-table-column>
-								<el-table-column prop="address"  width="100px" label="单价">
-								</el-table-column>
-								<el-table-column prop="address" width="100px" label="类别">
+								<el-table-column prop="category" label="类别" class="column">
 								</el-table-column>
 							</el-table>
 
@@ -31,8 +32,16 @@
 						<!-- <el-footer>Footer</el-footer> -->
 					</el-container>
 					<el-aside width="350px">
-						<div>姓名：{{name}}</div>
-						<div>部门：{{pading}}</div>
+						<div class="state" style="background-color: #28e851;" v-show="state === 1"><h1>状态：已取餐</h1></div>
+						<div class="state" style="background-color: orangered;" v-show="state === 0"><h1>状态：未取餐</h1></div>
+						<div class="name">姓名：{{name}}</div>
+						
+						<div class="name" v-show="pading.length<=3">部门：{{pading}}</div>
+						<div class="name" style="font-size: 40px;" v-show="pading.length>3&&pading.length<=5">部门：{{pading}}</div>
+						<div class="name" style="font-size: 30px;" v-show="pading.length>5">部门：{{pading}}</div>
+						
+						
+
 					</el-aside>
 				</el-container>
 			</el-container>
@@ -52,37 +61,47 @@
 				message: '',
 				tableData: [{
 					id: '1',
-					images: require('../static/2 (1).jpg'),
-					name: '王小虎',
-					address: '素菜'
+					cell: 'A01',
+					unit_price: '1',
+					category: '素菜',
+					food_name: '酸辣土豆丝'
 				}, {
 					id: '2',
-					images: require('../static/2 (2).jpg'),
-					name: '王小虎',
-					address: '荤菜'
+					cell: 'C01',
+					unit_price: '1',
+					category: '荤菜',
+					food_name: '铁锅炖大鹅'
 				}, {
 					id: '3',
-					images: require('../static/2 (1).jpg'),
-					name: '王小虎',
-					address: '半荤'
+					cell: 'B01',
+					unit_price: '1',
+					category: '半荤',
+					food_name: '花菜炒肉'
 				}],
-				name: "小老鼠",
+				name: "陈晖",
+				// pading: "业务六部大货组",
 				pading: "信息部",
-				URL:require('../static/2 (1).jpg')
+				state: 0,
+				elstate: 'background-color: greenyellow;',
+
+				URL: require('../static/2 (1).jpg'),
+				srcList: [require('../static/2 (1).jpg')]
 			};
-		}
+		},
+		methods: {}
 	};
 </script>
 
 <style>
-	.el-header,
-	.el-footer {
-		background-color: #B3C0D1;
-		color: #333;
+	.el-header {
+		
+		color: #fff;
 		text-align: center;
-		line-height: 60px;
+		font-size: 45px;
 	}
-
+	.header{
+		
+	}
 	.el-aside {
 		background-color: #D3DCE6;
 		color: #333;
@@ -94,12 +113,53 @@
 		background-color: #E9EEF3;
 		color: #333;
 		text-align: center;
-		line-height: 10rem;
-		height: 100%;
+		line-height: 5rem;
 	}
 
 	body>.el-container {
 		margin-bottom: 0px;
-		height: 50px;
+		height: 160px;
+
 	}
+
+	.el-table .cell {
+		line-height: 200px;
+		height: 190px;
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	.el-table th.el-table__cell>.cell {
+		line-height: 3.125rem;
+		height: 3.125rem;
+		text-align: center;
+		margin: 0 auto;
+		font-size: 35px;
+
+	}
+
+	.name {
+		/* border: 1px solid ; */
+		height: 15rem;
+		margin: 15px auto;
+		line-height: 15rem;
+		border-radius: 20px;
+		background-color: #FFFFFF;
+		width: 95%;
+		font-size: 50px;
+		color: #425849;
+
+	}
+
+	.state {
+		margin: 15px auto;
+		width: 95%;
+		height: 190px;
+		border-radius: 20px;
+		font-size: 50px;
+		line-height: 190px;
+		color: #fff;
+		
+	}
+
 </style>

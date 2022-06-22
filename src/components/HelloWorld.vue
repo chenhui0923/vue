@@ -4,6 +4,7 @@
   
 	<ul>
 		<li><a :href="URL">食堂链接</a></li>
+		<li><a href="./new_file">测试链接</a></li>
 	</ul>
 	
   </div>
