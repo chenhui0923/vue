@@ -4,6 +4,8 @@ import Router from 'vue-router'
 import HelloWorld from "../components/HelloWorld";
 import new_file from '../components/new_file.vue';
 import canteen_dishes from '../components/canteen_dishes.vue'
+import first from '../components/first.vue'
+
 
 Vue.use(Router)
 export default new Router({
@@ -21,6 +23,11 @@ export default new Router({
 			path: '/canteen_dishes',
 			name: 'canteen_dishes',
 			component: canteen_dishes
+		},
+		{
+			path: '/first',
+			name: 'first',
+			component: first
 		}
 
 
