@@ -39,8 +39,11 @@
 						<div class="state" style="background-color: #28e851;" v-show="state === 1">
 							<h1>状态：已取餐</h1>
 						</div>
-						<div class="state" style="background-color: orangered;" v-show="state === 0">
+						<div class="state" style="background-color: #ffb013" v-show="state === 0">
 							<h1>状态：未取餐</h1>
+						</div>
+						<div class="state" style="background-color:#e60000 ;" v-show="state === 2">
+							<h1>状态：未点餐</h1>
 						</div>
 
 						<div class="name">姓名：{{name}}</div>
@@ -90,12 +93,12 @@
 					unit_price: '1',
 					category: '半荤',
 					food_name: '花菜炒肉',
-					imgurl:require('../static/2 (1).jpg')
+					imgurl:require('../static/5.jpg')
 				}],
 				name: "小陈晖",
 				// pading: "业务六部大货组",
 				pading: "信息部",
-				state: 0,
+				state: 1,
 			};
 		},
 		methods: {
