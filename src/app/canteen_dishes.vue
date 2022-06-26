@@ -78,14 +78,14 @@
 					unit_price: '1',
 					category: '素菜',
 					food_name: '酸辣土豆丝',
-					imgurl:require('../static/2 (1).jpg')
+					imgurl:require('../assets/2 (1).jpg')
 				}, {
 					id: '2',
 					cell: 'C01',
 					unit_price: '1',
 					category: '荤菜',
 					food_name: '铁锅炖大鹅',
-					imgurl:require('../static/2 (2).jpg')
+					imgurl:require('../assets/2 (2).jpg')
 
 				}, {
 					id: '3',
@@ -93,7 +93,7 @@
 					unit_price: '1',
 					category: '半荤',
 					food_name: '花菜炒肉',
-					imgurl:require('../static/5.jpg')
+					imgurl:require('../assets/5.jpg')
 				}],
 				name: "小陈晖",
 				// pading: "业务六部大货组",
