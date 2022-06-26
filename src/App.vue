@@ -9,7 +9,7 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-import Test from './components/new_file.vue'
+import Test from './app/new_file.vue'
 
 
 export default {

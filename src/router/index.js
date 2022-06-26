@@ -2,8 +2,8 @@ import Vue from 'vue'
 //对应你要跳转的组件
 import Router from 'vue-router'
 import HelloWorld from "../components/HelloWorld";
-import new_file from '../components/new_file.vue';
-import canteen_dishes from '../components/canteen_dishes.vue'
+import new_file from '../app/new_file.vue';
+import canteen_dishes from '../app/canteen_dishes.vue'
 import first from '../components/first.vue'
 
 
