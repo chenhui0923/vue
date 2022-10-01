@@ -5,6 +5,7 @@ import HelloWorld from "../components/HelloWorld";
 import new_file from '../app/new_file.vue';
 import canteen_dishes from '../app/canteen_dishes.vue'
 import first from '../components/first.vue'
+import inputtest from '../app/inputtest.vue'
 
 
 Vue.use(Router)
@@ -28,6 +29,11 @@ export default new Router({
 			path: '/first',
 			name: 'first',
 			component: first
+		},
+		{
+			path: '/inputtest',
+			name: 'inputtest',
+			component: inputtest
 		}
 
 
