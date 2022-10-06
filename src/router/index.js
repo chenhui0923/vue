@@ -3,11 +3,11 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from "../components/HelloWorld";
 import new_file from '../app/new_file.vue';
-import canteen_dishes from '../app/canteen_dishes.vue'
-import first from '../components/first.vue'
-import inputtest from '../app/inputtest.vue
-import testchpz from '../app/testchpz.vue'
-import sum from '../app/sum.vue'
+import canteen_dishes from '../app/canteen_dishes.vue';
+import first from '../components/first.vue';
+import inputtest from '../app/inputtest.vue';
+import testchpz from '../app/testchpz.vue';
+import sum from '../app/sum.vue';
 
 
 Vue.use(Router)
