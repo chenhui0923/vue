@@ -2,14 +2,36 @@
 	<div>
 		<div>
 			<el-container>
-				<el-header style="height: 90px;line-height: 90px;background-color:#B3C0D1; background-color: #225794;">
+				<!-- <el-header style="height: 90px;line-height: 90px;background-color:#B3C0D1; background-color: #225794;">
 					<h1>个人菜单</h1>
 
-				</el-header>
+				</el-header> -->
 				<el-container>
+					<el-aside width="350px">
+						<!-- 取餐状态判断 -->
+						<div class="state" style="background-color: #28e851;" v-show="state === 1">
+							<h1>状态：已取餐</h1>
+						</div>
+						<div class="state" style="background-color: #ffb013" v-show="state === 0">
+							<h1>状态：未取餐</h1>
+						</div>
+						<div class="state" style="background-color:#e60000 ;" v-show="state === 2">
+							<h1>状态：未点餐</h1>
+						</div>
+					
+						<div class="name">{{name}}</div>
+						<!-- 部门长度判断，调整字体大小 -->
+						<div class="name" v-show="pading.length<=3">{{pading}}</div>
+						<div class="name" style="font-size: 40px;" v-show="pading.length>3&&pading.length<=5">
+						{{pading}}</div>
+						<div class="name" style="font-size: 30px;" v-show="pading.length>5">{{pading}}</div>
+					
+					
+					
+					</el-aside>
 
 					<el-container>
-						<el-main>
+						<el-main  >
 							<el-table :data="tableData" style="width: 100%;font-size: 50px;border-radius: 30px;">
 								<!-- <el-table-column prop="cell" label="编码" class="column">
 								</el-table-column> -->
@@ -34,28 +56,7 @@
 						</el-main>
 						<!-- <el-footer>Footer</el-footer> -->
 					</el-container>
-					<el-aside width="350px">
-						<!-- 取餐状态判断 -->
-						<div class="state" style="background-color: #28e851;" v-show="state === 1">
-							<h1>状态：已取餐</h1>
-						</div>
-						<div class="state" style="background-color: #ffb013" v-show="state === 0">
-							<h1>状态：未取餐</h1>
-						</div>
-						<div class="state" style="background-color:#e60000 ;" v-show="state === 2">
-							<h1>状态：未点餐</h1>
-						</div>
-
-						<div class="name">姓名：{{name}}</div>
-						<!-- 部门长度判断，调整字体大小 -->
-						<div class="name" v-show="pading.length<=3">部门：{{pading}}</div>
-						<div class="name" style="font-size: 40px;" v-show="pading.length>3&&pading.length<=5">
-							部门：{{pading}}</div>
-						<div class="name" style="font-size: 30px;" v-show="pading.length>5">部门：{{pading}}</div>
-
-
-
-					</el-aside>
+					
 				</el-container>
 			</el-container>
 
@@ -114,11 +115,8 @@
 		text-align: center;
 		font-size: 45px;
 	}
-
-	.header {}
-
 	.el-aside {
-		background-color: #D3DCE6;
+		background-color: #c3c9c8;
 		color: #333;
 		text-align: center;
 		line-height: 100%;
@@ -131,27 +129,32 @@
 		line-height: 5rem;
 	}
 
-	body>.el-container {
+/* 	body>.el-container {
 		margin-bottom: 0px;
 		height: 160px;
 
-	}
+	} */
 
-	.el-table .cell {
-		line-height: 200px;
-		height: 190px;
+/* 	.el-table .cell {
+		line-height: 260px;
+		height: 260px;
 		text-align: center;
 		margin: 0 auto;
+		background-color: #E4E4E4;
+		color: #000;
 	}
 
 	.el-table th.el-table__cell>.cell {
 		line-height: 3.125rem;
-		height: 3.125rem;
+		height: 3.25rem;
 		text-align: center;
 		margin: 0 auto;
 		font-size: 35px;
+		background-color: #E4E4E4;
+		color: #000;
+		
 
-	}
+	} */
 
 	.name {
 		/* border: 1px solid ; */
@@ -159,10 +162,10 @@
 		margin: 15px auto;
 		line-height: 15rem;
 		border-radius: 20px;
-		background-color: #FFFFFF;
+		background-color: #29d8d9;
 		width: 95%;
 		font-size: 50px;
-		color: #425849;
+		color: #fff;
 
 	}
 
@@ -173,7 +176,13 @@
 		border-radius: 20px;
 		font-size: 50px;
 		line-height: 190px;
-		color: #fff;
+		color: #000;
 
 	}
+/* 	.el-table tr {
+		background-color: #E4E4E4;
+	}
+	.el-table th.el-table__cell{
+		background-color: #E4E4E4;
+	} */
 </style>

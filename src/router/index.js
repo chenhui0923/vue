@@ -5,6 +5,8 @@ import HelloWorld from "../components/HelloWorld";
 import new_file from '../app/new_file.vue';
 import canteen_dishes from '../app/canteen_dishes.vue'
 import first from '../components/first.vue'
+import testchpz from '../app/testchpz.vue'
+import sum from '../app/sum.vue'
 
 
 Vue.use(Router)
@@ -28,7 +30,18 @@ export default new Router({
 			path: '/first',
 			name: 'first',
 			component: first
+		},
+		{
+			path: '/testchpz',
+			name: 'testchpz',
+			component: testchpz
+		},
+		{
+			path: '/sum',
+			name: 'sum',
+			component: sum
 		}
+		
 
 
 	]
