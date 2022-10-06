@@ -7,6 +7,7 @@
 		<li><a href="./testchpz">出货排载</a></li>
 		<li><a href="./new_file">测试链接</a></li>
 		<li><a href="./first">学习vue的链接</a></li>
+		<li><a href="./inputtest">输入框样式测试</a></li>
 		<li><a href="./sum">饿了么合计</a></li>
 		
 		
