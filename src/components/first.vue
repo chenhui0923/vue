@@ -24,10 +24,14 @@
 		<ul v-for="set in sets">
 			<li v-for="n in even(set)">{{ n }}</li>
 		</ul>
+		<div>
+			<ch-input textcs="手机号"></ch-input>
+		</div>
 	</div>
 </template>
 
 <script>
+	import chinput from '../app/inputtest.vue'
 	export default {
 		data() {
 			return {
@@ -76,6 +80,9 @@
 					return number % 2 === 0
 				})
 			}
+		},
+		components:{
+			"ch-input":chinput
 		}
 	}
 </script>

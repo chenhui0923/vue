@@ -38,7 +38,7 @@ export default new Router({
 			component: inputtest
 
 		},
-{
+		{
 			path: '/testchpz',
 			name: 'testchpz',
 			component: testchpz
@@ -47,7 +47,7 @@ export default new Router({
 			path: '/sum',
 			name: 'sum',
 			component: sum
-		}		
+		}
 
 
 	]

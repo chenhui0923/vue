@@ -3,11 +3,11 @@
   <div>
     <div class="frame">
       <!--// focus:获取焦点事件 blur:失焦事件 clear:清空事件 input:input值改变时触发事件 -->
-      <el-input @focus="download" @blur="unfocused" v-model="input" @clear="empty" @input="inputText" clearable>
+      <el-input @focus="download" @blur="unfocused" v-model="input" @clear="empty" @input="inputText" clearable class="inntee">
       </el-input>
       <!--// 通过changeIndex的值判断生效那一套样式 -->
       <!--// :class="[{'类名':条件},{'类名':条件}]" -->
-      <span :class="[{'focusBlur':changeIndex == 1},{'focusBlurTwo':changeIndex == 2}]">手机号</span>
+      <span :class="[{'focusBlur':changeIndex == 1},{'focusBlurTwo':changeIndex == 2}]">{{textcs}}</span>
     </div>
   </div>
 </template>
@@ -17,8 +17,11 @@
       return {
         input: '', //input绑定的model
         changeIndex: 0, //定义一个变量;0默认样式，1第二套样式，2第三套样式
+		
       };
     },
+	props:['textcs'],
+	
     methods: {
       //获得焦点事件
       download() {
@@ -44,13 +47,17 @@
   };
 </script>
  
-<style scoped>
+<style scoped >
   .frame {
     /* 宽高大家可根据自己需求进行调整，调整完后下面的样式也要进行微调 */
     width: 20%;
     height: 40px;
     /* 父元素设置相对定位，这样子元素设置绝对定位后就会在父元素的左上角*/
     position: relative;
+
+  }
+  .inntee{
+	  margin: 5px;
   }
  
   .frame span {
@@ -58,7 +65,7 @@
     position: absolute;
     top: 0;
     left: 3%;
-    padding: 0px 7px;
+    padding: 5px 7px;
     display: inline-block;
     margin-top: -0.55%;
     color: #9e9e9e;
