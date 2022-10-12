@@ -1,6 +1,5 @@
 
 <template>
-  <div>
     <div class="frame">
       <!--// focus:获取焦点事件 blur:失焦事件 clear:清空事件 input:input值改变时触发事件 -->
       <el-input @focus="download" @blur="unfocused" v-model="input" @clear="empty" @input="inputText" clearable class="inntee">
@@ -9,7 +8,7 @@
       <!--// :class="[{'类名':条件},{'类名':条件}]" -->
       <span :class="[{'focusBlur':changeIndex == 1},{'focusBlurTwo':changeIndex == 2}]">{{textcs}}</span>
     </div>
-  </div>
+
 </template>
 <script>
   export default {
@@ -58,6 +57,7 @@
   }
   .inntee{
 	  margin: 5px;
+	
   }
  
   .frame span {
@@ -68,7 +68,7 @@
     padding: 5px 7px;
     display: inline-block;
     margin-top: -0.55%;
-    color: #9e9e9e;
+    color: #9e9e9e;/**/
     font-size: 14px;
     pointer-events: none;
     height: 40px;

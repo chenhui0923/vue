@@ -27,6 +27,13 @@
 		<div>
 			<ch-input textcs="手机号"></ch-input>
 		</div>
+		<div>
+			<input type="text" v-model="info"/>
+			<button @click="infoclick">添加</button>
+			<ul>
+				<li v-for="item in list">{{item}}</li>
+			</ul>
+		</div>
 	</div>
 </template>
 
@@ -46,7 +53,9 @@
 					publishedAt: '2016-04-10'
 				},
 				numbers: [1, 2, 3, 4, 5],
-				sets: [[ 1, 2, 3, 4, 5 ], [6, 7, 8, 9, 10]]
+				sets: [[ 1, 2, 3, 4, 5 ], [6, 7, 8, 9, 10]],
+				info:'',
+				list:[]
 			}
 		},
 		methods: {
@@ -68,7 +77,11 @@
 			    return numbers.filter(function (number) {
 			      return number % 2 === 0
 			    })
-			  }
+			  },
+			infoclick(){
+				this.list.push(this.info)
+				this.info=''
+			}
 
 		},
 		computed: {
