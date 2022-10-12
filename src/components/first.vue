@@ -24,10 +24,11 @@
 		<ul v-for="set in sets">
 			<li v-for="n in even(set)">{{ n }}</li>
 		</ul>
-		<div>
+		<div style="float: left;">
 			<ch-input textcs="手机号"></ch-input>
 		</div>
-		<div>
+	<el-button type="primary">主要按钮</el-button>
+		<div style="display: block;">
 			<input type="text" v-model="info"/>
 			<button @click="infoclick">添加</button>
 			<ul>
